@@ -1,0 +1,16 @@
+{
+  "name": "weddinggiftlist",
+  "version": "1.0.0",
+  "description": "wedding giftlist Y and J",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run dev"
+  },
+  "author": "José",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "mysql2": "^3.7.0"
+  }
+}

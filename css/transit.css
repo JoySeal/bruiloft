@@ -1,0 +1,179 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* //do not remove this .card styling*/
+.card {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card--expanded {
+  cursor: default;
+}
+
+/* this is to get the image to the left side when clicking on it */
+.card--expanded .grid__item{
+  position: fixed;
+  left: 0% !important;
+  top: 0% !important;
+  max-width: 300px;
+  /* max-height: 250px; */
+}
+
+.card__content {
+  background: rgb(122, 102, 191);
+	background-image: url('../images/bg4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	height: max-content;
+  overflow: inherit;
+}
+
+.card--expanded .card__content {
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.card--expanded .slider__item {
+  padding: 0%;
+}
+
+.card__user-image {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  will-change: transform;
+  transform-origin: 0 0;
+}
+
+.card--expanded .card__user-image {
+  width: 100px;
+  height: 100px;
+  
+}
+
+.card__images {
+  display: grid;
+  gap: 10px;
+  max-width: 800px;
+  width: 100%;
+  margin: 50px auto 0;
+  transform-origin: 0 0;
+  position: absolute;
+  top: 100%;
+}
+
+.card--expanded .card__images {
+  position: static;
+}
+
+.card__image {
+  border-radius: 5px;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  transform-origin: 0 0;
+  line-height: 1;
+}
+
+.card--expanded .card__title {
+  font-size: 30px;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px 14px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card--expanded .card__header {
+  flex-direction: row;
+}
+
+.card__bio {
+  opacity: 0;
+  height: 0;
+  transform-origin: 0 0;
+}
+
+.card--expanded .card__bio {
+  max-width: 800px;
+  margin: 20px auto 0;
+  opacity: 1;
+  height: auto;
+}
+
+.card__close {
+  position: absolute;
+  right: -40px;
+  top: 20px;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  color: white;
+  padding: 10px;
+}
+
+.card--expanded .card__close {
+  transition: 0.3s all ease;
+  transition-delay: 0.3s;
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-100%) translateX(-20px);
+}
+
+.card--animatable .card__user-image,
+.card--animatable .card__title,
+.card--animatable .card__subtitle,
+.card--animatable .card__user-links,
+.card--animatable .card__bio,
+.card--animatable .card__images,
+.card--animatable .card__content {
+  transition: all 0.5s cubic-bezier(0, 0, 0.21, 1);
+}
+
+@media (min-width: 520px) {
+  .card__images {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .card__images {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

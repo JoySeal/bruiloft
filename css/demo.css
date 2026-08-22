@@ -1,0 +1,245 @@
+/* General */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+/* Resets */
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Helper classes */
+.cf:before,
+.cf:after {
+	content: ' ';
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+.hidden {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Main styles */
+body {
+	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	color: #10e19f;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.bg {
+	background: #2A2B30;
+	background-image: url('../images/bg4.png');
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	height: max-content;
+}
+
+a {
+	text-decoration: none;
+	color: #e1ec0a;
+	outline: none;
+}
+a:hover {
+	color: #aa5cdc;
+	text-decoration:underline;
+}
+
+.underline {
+	text-decoration:underline;
+}
+
+/* Blueprint header */
+.bp-header {
+	width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 9em;
+}
+
+.bp-header h1 {
+	font-size: 3.125em;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 1.6em 0 0 0;
+}
+
+.bp-header h1 > span {
+	font-size: 50%;
+	display: block;
+	color: #4D4D5A;
+} 
+
+.bp-header > span {
+	font-weight: 700;
+	font-size: 2.85em;
+	color: #aa5cdc;
+	position: relative;
+	z-index: 100;
+	display: block;
+	padding: 0 0 .6em .1em;
+	letter-spacing: .5em;
+	text-transform: uppercase;
+	text-indent: 30px;
+}
+
+.bp-header > span span:after {
+	font-size: 50%;
+	font-size: 75%;
+	position: relative;
+	top: -8px;
+	left: -12px;
+	width: 30px;
+	height: 30px;
+}
+
+.bp-header > span span:hover:before {
+	content: attr(data-content);
+	font-size: 110%;
+	font-weight: 700;
+	line-height: 1.2;
+	position: absolute;
+	left: auto;
+	margin-left: 4px;
+	padding: .8em 1em;
+	text-align: left;
+	text-indent: 0;
+	letter-spacing: 0;
+	text-transform: none;
+	color: #e7fb0b;
+	background: #34f316;
+}
+
+.bp-header nav {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.bp-header nav a {
+	position: relative;
+	display: inline-block;
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0 .1em;
+	text-align: left;
+	border-radius: 50%;
+}
+
+.bp-header nav a > span {
+	display: none;
+}
+
+.bp-header nav a:hover:before {
+	content: attr(data-info);
+	color: #595A5F;
+	font-weight: bold;
+	font-size: 0.85em;
+	position: absolute;
+	top: 120%;
+	right: 0;
+	width: 600%;
+	text-align: right;
+	pointer-events: none;
+}
+
+.bp-header nav a:hover {
+	background: #5C5EDC;
+}
+.bp-header nav:after {
+	line-height: 2.4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-indent: 0;
+}
+
+.bp-header nav a:hover:after {
+	color: #fff;
+}
+
+@media screen and (max-width: 40em) {
+	.bp-header h1 {
+		font-size: 1.8em;
+	}
+}
+
+
+/*Title Text*/
+@font-face {
+  font-family: neon;
+  src: url(https://db.onlinewebfonts.com/t/790bec5e75015631c8b9e0df43a93061.ttf);
+}
+
+.cyber {
+  margin-top: 80px;
+  font-family: neon;
+  color: #FB42D4;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #F40AD5;
+  margin-left: -150px;
+  cursor: default;
+}
+.zone {
+  margin-top: 10px;
+  font-family: neon;
+  color: #42FDEB;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #23F6EF;
+  margin-left: 150px;
+  cursor: default;
+}
+
+/*Cyber Animation Stuff*/
+.cyber {
+  animation: cyber 2.2s ease-in infinite;
+  -moz-animation: cyber 2.2s ease-in infinite;
+  -webkit-animation: cyber 2.2s ease-in infinite;
+}
+@keyframes cyber {
+  0%,
+  100% {
+    text-shadow: 0 0 .5vw #FA0AC1, 0 0 2vw #FA0AC1, 0 0 6vw #FA0AC1, 0 0 6vw #FA0AC1, 0 0 .2vw #FE0BB8, .5vw .5vw .1vw #800964;
+    color: #FE0BB8;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800C5B, 0 0 1vw #800C5B, 0 0 4vw #800C5B, 0 0 4vw #800C5B, 0 0 .2vw #800C5B, .5vw .5vw .1vw #40043A;
+    color: #800964;
+  }
+}
+/*Zone Animationf*/
+.zone {
+  animation: zone 3.2s ease-out infinite;
+  -moz-animation: zone 3.2s ease-out infinite;
+  -webkit-animation: zone 3.2s ease-out infinite;
+  -o-animation: zone 3.2s ease-out infinite;
+}
+@keyframes zone {
+  0%,
+  100% {
+    text-shadow: 0 0 .5vw #10E19F, 0 0 2vw #10E19F, 0 0 6vw #10E19F, 0 0 6vw #10E19F, 0 0 .2vw #8BFEFD, .5vw .5vw .1vw #148270;
+    color: #28E7DE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #088140, 0 0 1vw #088140, 0 0 4vw #088140, 0 0 4vw #088140, 0 0 .2vw #088140, .5vw .5vw .1vw #0A4930;
+    color: #148C6B;
+  }
+}
