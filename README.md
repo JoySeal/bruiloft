@@ -1,21 +1,18 @@
-Flickity galleries and Isotope-powered filter functionality.
+# Wedding presents website
+
+## Lay-out
+Based on Flickity galleries and Isotope-powered filter functionality.
 [Article on Codrops](http://tympanus.net/codrops/?p=24206)
 [Demo](http://tympanus.net/Blueprints/FilterableProductGrid/)
 
+## Modal
 modal opening https://codepen.io/tahazsh/pen/MWPMEyB
 
-### Icons 
-[Font Awesome by Dave Gandy](http://fontawesome.io). Read more about the open source [license of Font Awesome](https://fortawesome.github.io/Font-Awesome/license/).
+## Icons 
+[Font Awesome by Dave Gandy](http://fontawesome.io). 
 
-
+## SVG loader
 [SVG loader](http://samherbert.net/svg-loaders/) by Sam Herbert.
 
-install
-MySql
-npm mysql
-npm i express
-npm init
-npm install cors
-npm install mysql2
 
 
